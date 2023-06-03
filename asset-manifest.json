@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/airport-auto-electrics/static/css/main.16629f36.css",
+    "main.js": "/airport-auto-electrics/static/js/main.155be99c.js",
+    "static/media/alternator.png": "/airport-auto-electrics/static/media/alternator.0240aa0aba5ac033bfb5.png",
+    "static/media/starter.png": "/airport-auto-electrics/static/media/starter.f2a49d8623ff13645695.png",
+    "static/media/reverse.png": "/airport-auto-electrics/static/media/reverse.3e7e8fbf4b80ed9462a1.png",
+    "static/media/dash.png": "/airport-auto-electrics/static/media/dash.09fd7fae94184c5ec66c.png",
+    "static/media/stereo3.jpeg": "/airport-auto-electrics/static/media/stereo3.7a09fa8ebd22fedf606f.jpeg",
+    "static/media/diagnostic.png": "/airport-auto-electrics/static/media/diagnostic.167b5c9d6e63d7f50ffe.png",
+    "static/media/tracker.png": "/airport-auto-electrics/static/media/tracker.c4d0a2bff41fc7e876b6.png",
+    "static/media/led.png": "/airport-auto-electrics/static/media/led.d917d57798384fccbfbc.png",
+    "static/media/sensor.png": "/airport-auto-electrics/static/media/sensor.caded631e2e966869ac7.png",
+    "static/media/landing-car.jpg": "/airport-auto-electrics/static/media/landing-car.6b2815586661512cdd82.jpg",
+    "static/media/tytan-security.png": "/airport-auto-electrics/static/media/tytan-security.ae63782f58bb0c4bc21b.png",
+    "static/media/thinkware.webp": "/airport-auto-electrics/static/media/thinkware.29577bb22514c4e5643a.webp",
+    "index.html": "/airport-auto-electrics/index.html",
+    "main.16629f36.css.map": "/airport-auto-electrics/static/css/main.16629f36.css.map",
+    "main.155be99c.js.map": "/airport-auto-electrics/static/js/main.155be99c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16629f36.css",
+    "static/js/main.155be99c.js"
+  ]
+}
