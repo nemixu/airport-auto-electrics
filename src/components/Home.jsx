@@ -1,3 +1,5 @@
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import About from './About';
 import Contact from './Contact';
@@ -74,12 +76,11 @@ function Home() {
             aria-label="to top button"
             onClick={handleTopButtonClick}
           >
-            <i
-              className="fas fas fa-arrow-up text-white mx-auto my-auto"
-              aria-label="icon"
-            >
-              HERE
-            </i>
+            <FontAwesomeIcon
+              icon={faArrowUp}
+              className="fa-arrow-up text-white mx-auto my-auto"
+            />
+            {/* <FontAwesomeIcon icon={faHeart} /> */}
           </a>
         </div>
       )}

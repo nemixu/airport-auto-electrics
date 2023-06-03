@@ -29,17 +29,21 @@ function About() {
           <div className="col-12 text-center">
             <h3 className="about-us-header display-4">About Us</h3>
           </div>
-          <div className="col-12 text-center text-white">
+          <div className="col-12 text-center text-white px-5">
             <p className="about-us-text">
-              Airport Auto Electrics is Dublin's leading specialist in car
-              electrics.
+              With over 30 years of experience, Airport Auto Electrics stands as
+              one of Dublin's premier specialists in auto electrics. Located in
+              North Dublin for the past 27 years. Qualified auto electricians
+              ensures that your vehicle receives the utmost care and expertise.
             </p>
             <p className="about-us-text pb-5 mb-5">
-              We provide a range of products and services to cover all your auto
-              electrical needs, including vehicle security systems, rotating
+              At Airport Auto Electrics, we offer a comprehensive range of
+              products and services to meet all your auto electrical needs. From
+              cutting-edge vehicle security systems to reliable rotating
               electricals, parking assist systems, GPS tracking, and fault
-              finding. Conveniently located near Dublin Airport, M50, and M1
-              motorways.
+              finding solutions, we have you covered. Conveniently situated near
+              Dublin Airport, M50, and M1 motorways, we provide competitive
+              rates and prioritize swift turnaround times.
             </p>
           </div>
           {features.map((feature, index) => (

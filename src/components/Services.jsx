@@ -1,18 +1,19 @@
 import React from 'react';
 import Altenator from '../Images/alternator.png';
-import Audio from '../Images/audio.png';
 import Dash from '../Images/dash.png';
 import Fault from '../Images/diagnostic.png';
 import LED from '../Images/led.png';
 import Cam from '../Images/reverse.png';
 import Sensor from '../Images/sensor.png';
 import Starter from '../Images/starter.png';
+import Audio from '../Images/stereo3.jpeg';
+import DashCam from '../Images/thinkware.webp';
 import Tracker from '../Images/tracker.png';
 import Security from '../Images/tytan-security.png';
 
 const servicesData = [
   {
-    title: 'Car Security Systems',
+    title: 'Vehicle Security Systems',
     image: Security,
     description:
       'We offer a wide range of car security systems from leading systems from Tytan Car alarms, Avital Car alarms and Sterling Car imobilizers',
@@ -25,7 +26,7 @@ const servicesData = [
   },
   {
     title: 'Dash Cameras',
-    image: Cam,
+    image: DashCam,
     description:
       'We offer Thinkware Dashcams supplied and fitted to ensure you are safe and protected on the roads.',
   },
@@ -40,18 +41,6 @@ const servicesData = [
     description: 'We repair and provide new alternators',
   },
   {
-    title: 'Vehicle Security',
-    image: Security,
-    description:
-      'We offer vehicle security system installation and maintenance',
-  },
-  {
-    title: 'Dash Camera',
-    image: Dash,
-    description:
-      'We install dash cameras for enhanced vehicle safety and monitoring',
-  },
-  {
     title: 'Reverse Cameras',
     image: Cam,
     description: 'We install reverse cameras for improved rearview visibility',
@@ -60,17 +49,6 @@ const servicesData = [
     title: 'Reverse Sensors',
     image: Sensor,
     description: 'We install reverse sensors for better parking assistance',
-  },
-  {
-    title: 'GPS Tracking',
-    image: Tracker,
-    description:
-      'We offer GPS tracking system installation for vehicle tracking and security',
-  },
-  {
-    title: 'Car Audio Upgrades',
-    image: Audio,
-    description: 'We offer car audio system upgrades and installations',
   },
   {
     title: 'Fault Finding',
@@ -84,23 +62,26 @@ function Services() {
   return (
     <section className="services" id="services">
       <div className="container">
+        <h3 className="services-header display-4 mb-5">Services</h3>
         <div className="row">
-          <div className="col-12 text-center">
-            <h3 className="services-header display-4 mb-5">Services</h3>
-          </div>
           {servicesData.map((service, index) => (
             <div
-              className="col-sm-6 col-md-4 text-center services-text"
+              className="col-sm-6 col-md-6 d-flex align-items-stretch"
               key={index}
             >
-              <h4>{service.title}</h4>
-              <img
-                className="services-images"
-                src={service.image}
-                alt={service.title}
-              />
-              <div className="overlay-services">
-                <div className="text">{service.description}</div>
+              <div className="card service-card">
+                <img
+                  src={service.image}
+                  className="card-img-top"
+                  alt={service.title}
+                />
+                <div className="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 className="card-title">{service.title}</h5>
+                    <p className="card-text">{service.description}</p>
+                  </div>
+                  {/* <button className="btn btn-primary">Learn More</button> */}
+                </div>
               </div>
             </div>
           ))}
