@@ -1,72 +1,142 @@
-import React, { useState } from 'react';
+import {
+  faBars,
+  faCartShopping,
+  faCircleInfo,
+  faHouse,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames';
+import React, { useEffect, useRef, useState } from 'react';
 
-//todo pass props of the state of if nav is open do the functionality in home as overlays live in home and clicks.
 function MobileNavbar() {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+  const [isNavBackgroundVisible, setNavBackgroundVisible] = useState(false);
+  const navRef = useRef(null);
 
-  const handleBurgerIconClick = () => {
+  const handleBurgerIconClick = (event) => {
+    event.stopPropagation();
     setMobileNavOpen(true);
+    setNavBackgroundVisible(true);
   };
 
   const handleMobileNavBgClick = () => {
     setMobileNavOpen(false);
+    setNavBackgroundVisible(false);
   };
 
-  const handleMobileNavItemClick = () => {
+  const handleMobileNavItemClick = (event, targetId) => {
+    event.preventDefault();
     setMobileNavOpen(false);
+    setNavBackgroundVisible(false);
+    scrollToSection(targetId);
   };
+
+  const scrollToSection = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    if (!isMobileNavOpen) {
+      return;
+    }
+    const handleClickOutside = (event) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        !event.target.classList.contains('burger-button')
+      ) {
+        setMobileNavOpen(false);
+        setNavBackgroundVisible(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMobileNavOpen]);
+
+  const mobileNavClasses = classNames('mobile-nav', {
+    transition: isMobileNavOpen,
+    active: isMobileNavOpen,
+  });
+
+  const navBackgroundClasses = classNames('nav-background', {
+    'overlay-nav': isMobileNavOpen,
+  });
 
   return (
     <>
       <li className="list-inline-item d-block d-lg-none">
-        <a
+        <button
           aria-label="open navigation button"
-          className="burger-button"
-          href="#"
+          className="btn burger-button"
           value="none"
           onClick={handleBurgerIconClick}
         >
-          <i className="fas fa-bars fa-lg text-black"></i>
-        </a>
+          <FontAwesomeIcon icon={faBars} />
+        </button>
       </li>
-      <div className="mobile-nav">
+      <div className={mobileNavClasses} ref={navRef}>
         <div className="mobile-nav-inner">
           <ul className="mobile-nav-links">
-            <li className="mobile-nav-link-items text-black">
-              <a className="text-black anchor-fill" aria-label="home" href="">
-                <i className="fas fa-home pr-2"></i>Home
+            <li className="mobile-nav-link-items text-white">
+              <a
+                className="text-white anchor-fill"
+                aria-label="home"
+                href="#home"
+                onClick={(event) => handleMobileNavItemClick(event, 'home')}
+              >
+                <FontAwesomeIcon icon={faHouse} />
+                <span className="nav-link-text px-2">Home</span>
               </a>
             </li>
-            <li className="mobile-nav-link-items text-black">
+            <li className="mobile-nav-link-items text-white">
               <a
-                className="text-black anchor-fill"
+                className="text-white anchor-fill"
                 aria-label="classNamees"
-                href=""
+                href="#about"
+                onClick={(event) => handleMobileNavItemClick(event, 'about')}
               >
-                <i className="fas fa-shopping-basket pr-2"></i>About
+                <FontAwesomeIcon icon={faCircleInfo} />
+                <span className="nav-link-text px-2">About</span>
               </a>
             </li>
-            <li className="mobile-nav-link-items text-black">
+            <li className="mobile-nav-link-items text-white">
               <a
-                className="text-black anchor-fill"
+                className="text-white anchor-fill"
                 aria-label="services"
-                href=""
+                href="#services"
+                onClick={(event) => handleMobileNavItemClick(event, 'services')}
               >
-                <i className="fas fa-envelope pr-2"></i>Services
+                <FontAwesomeIcon icon={faCartShopping} />
+                <span className="nav-link-text px-2">Services</span>
               </a>
             </li>
-            <li className="mobile-nav-link-items text-black">
+            <li className="mobile-nav-link-items text-white">
               <a
-                className="text-black anchor-fill"
+                className="text-white anchor-fill"
                 aria-label="contact"
-                href=""
+                href="#contact"
+                onClick={(event) => handleMobileNavItemClick(event, 'contact')}
               >
-                <i className="fas fa-envelope pr-2"></i>Contact
+                <FontAwesomeIcon icon={faPhone} />
+                <span className="nav-link-text px-2">Contact</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
+      {isNavBackgroundVisible && (
+        <div
+          className={navBackgroundClasses}
+          onClick={handleMobileNavBgClick}
+        />
+      )}
     </>
   );
 }

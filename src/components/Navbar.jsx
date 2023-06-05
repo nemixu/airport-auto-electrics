@@ -43,9 +43,7 @@ function Navbar() {
           className="burger-button"
           href="#"
           value="none"
-        >
-          <i className="fas fa-bars fa-lg text-black">HERE</i>
-        </a>
+        ></a>
       </li>
       <MobileNavbar />
     </nav>
