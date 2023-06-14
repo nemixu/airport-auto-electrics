@@ -46,20 +46,26 @@ function About() {
               rates and prioritize swift turnaround times.
             </p>
           </div>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="col-sm-12 col-md-4 text-center about-us-statement-box"
-            >
-              <div className="feature about-us-statement-box-inner">
-                <i className={`feature-icon ${feature.icon}`}></i>
-                <h4 className="feature-title text-white">{feature.title}</h4>
-                <p className="feature-description text-white">
-                  {feature.description}
-                </p>
-              </div>
+          <div className="d-flex justify-content-center ">
+            <div className="row justify-content-center">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="col-sm-12 col-md-4 text-center about-us-statement-box"
+                >
+                  <div className="feature about-us-statement-box-inner">
+                    <i className={`feature-icon ${feature.icon}`}></i>
+                    <h4 className="feature-title text-white">
+                      {feature.title}
+                    </h4>
+                    <p className="feature-description text-white">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

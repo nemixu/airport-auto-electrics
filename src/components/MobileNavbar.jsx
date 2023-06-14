@@ -16,8 +16,8 @@ function MobileNavbar() {
 
   const handleBurgerIconClick = (event) => {
     event.stopPropagation();
-    setMobileNavOpen(true);
-    setNavBackgroundVisible(true);
+    setMobileNavOpen(!isMobileNavOpen);
+    setNavBackgroundVisible(!isMobileNavOpen);
   };
 
   const handleMobileNavBgClick = () => {

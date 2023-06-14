@@ -86,12 +86,12 @@
 }
 
 .about-us {
-  background: #14213d;
-  padding-bottom: 200px;
+  background: #115169;
+  padding-bottom: 100px;
 }
 
 .about-us-header {
-  padding-top: 200px;
+  padding-top: 100px;
   color: #fff;
 }
 
@@ -99,12 +99,16 @@
   font-size: 2em;
   color: #fff;
   text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
+  color: #ff4500;
+}
+.icon-colour {
+  color: #ff4500;
 }
 
 .about-us-statement-box {
   align-items: center;
   display: flex;
-  background: #172749cd;
+  background: #115169;
   border-radius: 31px;
   height: 200px;
   width: 300px;
@@ -121,12 +125,12 @@
 }
 
 .services {
-  padding-bottom: 150px;
+  padding-bottom: 100px;
   position: relative;
 }
 
 .services-header {
-  padding-top: 200px;
+  padding-top: 100px;
   color: #14213d;
 }
 
@@ -169,9 +173,9 @@
 }
 
 .mobile-nav {
-  background: #14213d;
+  background: #115169;
   position: fixed;
-  top: 0;
+  top: 92px;
   left: 0;
   z-index: 999;
   width: 85%;
@@ -349,7 +353,7 @@ a:hover {
 
 .contact {
   padding: 80px 0;
-  background: #14213d;
+  background: #115169;
 }
 
 .contact-header {
@@ -387,6 +391,10 @@ a:hover {
 
 .contact-map {
   height: 300px;
-  width: 100%;
+  width: 40vw;
   margin-top: 30px;
+}
+
+.balance {
+  text-wrap: balance;
 }

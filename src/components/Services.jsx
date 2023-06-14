@@ -66,7 +66,9 @@ function Services() {
         <div className="row">
           {servicesData.map((service, index) => (
             <div
-              className="col-sm-6 col-md-6 d-flex align-items-stretch"
+              className={`col-sm-6 col-md-6 d-flex align-items-stretch ${
+                index % 2 === 0 ? 'justify-content-end' : ''
+              }`}
               key={index}
             >
               <div className="card service-card">

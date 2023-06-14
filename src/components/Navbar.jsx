@@ -4,7 +4,7 @@ import MobileNavbar from './MobileNavbar';
 
 function Navbar() {
   return (
-    <nav className="nav-main fixed-top w-100">
+    <nav className="nav-main justify-content-around fixed-top w-100">
       <div className="nav-main-logo">
         <a aria-label="Home" href="#home">
           <img className="logo-img" src={logo} alt="Logo of the website" />
