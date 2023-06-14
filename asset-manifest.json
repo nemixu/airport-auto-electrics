@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/airport-auto-electrics/static/css/main.104ab97d.css",
-    "main.js": "/airport-auto-electrics/static/js/main.3a09f090.js",
+    "main.css": "/airport-auto-electrics/static/css/main.c701c7a8.css",
+    "main.js": "/airport-auto-electrics/static/js/main.91eb13ba.js",
     "static/media/alternator.png": "/airport-auto-electrics/static/media/alternator.0240aa0aba5ac033bfb5.png",
     "static/media/starter.png": "/airport-auto-electrics/static/media/starter.f2a49d8623ff13645695.png",
     "static/media/reverse.png": "/airport-auto-electrics/static/media/reverse.3e7e8fbf4b80ed9462a1.png",
@@ -15,11 +15,11 @@
     "static/media/tytan-security.png": "/airport-auto-electrics/static/media/tytan-security.ae63782f58bb0c4bc21b.png",
     "static/media/thinkware.webp": "/airport-auto-electrics/static/media/thinkware.29577bb22514c4e5643a.webp",
     "index.html": "/airport-auto-electrics/index.html",
-    "main.104ab97d.css.map": "/airport-auto-electrics/static/css/main.104ab97d.css.map",
-    "main.3a09f090.js.map": "/airport-auto-electrics/static/js/main.3a09f090.js.map"
+    "main.c701c7a8.css.map": "/airport-auto-electrics/static/css/main.c701c7a8.css.map",
+    "main.91eb13ba.js.map": "/airport-auto-electrics/static/js/main.91eb13ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.104ab97d.css",
-    "static/js/main.3a09f090.js"
+    "static/css/main.c701c7a8.css",
+    "static/js/main.91eb13ba.js"
   ]
 }
