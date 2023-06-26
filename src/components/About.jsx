@@ -27,7 +27,7 @@ function About() {
       <div className="container">
         <div className="row justify-content-center about-container">
           <div className="col-12 text-center">
-            <h3 className="about-us-header display-4">About Us</h3>
+            <h3 className="about-us-header display-4">Who we are</h3>
           </div>
           <div className="col-12 text-center text-white px-5">
             <p className="about-us-text">

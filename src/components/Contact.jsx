@@ -10,14 +10,13 @@ function Contact() {
         <div className="row">
           <div className="col-12 text-center">
             <h3 className="contact-header text-white display-4 mb-5">
-              Contact us
+              Get in touch
             </h3>
           </div>
         </div>
         <div className="row">
           <div className="col-md-12">
             <div className="contact-info">
-              <h4>Contact</h4>
               <p className="balance">
                 Unit 17, Collinstown Cross Industrial Estate, Old Airport Rd,
                 Cloghran, Dublin
