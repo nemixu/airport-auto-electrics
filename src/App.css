@@ -90,6 +90,10 @@
   padding-bottom: 100px;
 }
 
+.about-container {
+  padding: 0 200px 0 200px;
+}
+
 .about-us-header {
   padding-top: 100px;
   color: #fff;
@@ -397,4 +401,10 @@ a:hover {
 
 .balance {
   text-wrap: balance;
+}
+
+@media only screen and (max-width: 1366px) {
+  .about-container {
+    padding: 0;
+  }
 }

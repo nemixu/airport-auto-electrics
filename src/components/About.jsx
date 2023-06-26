@@ -25,7 +25,7 @@ function About() {
   return (
     <section className="about-us" id="about">
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center about-container">
           <div className="col-12 text-center">
             <h3 className="about-us-header display-4">About Us</h3>
           </div>
