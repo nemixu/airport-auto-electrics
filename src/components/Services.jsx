@@ -22,7 +22,7 @@ const servicesData = [
     title: 'Android Auto Car Audio Upgrades',
     image: Audio,
     description:
-      'We offer in car Audio upgrades with the most recent 7inch car screens running Android which features android auto. Car specific upgrades to fit perfectly in your make and model.',
+      'We offer in car Audio upgrades with the most recent 7 inch, 9 inch and 10 inch car screens running Android which features android auto & apple carplay. Car specific upgrades to fit perfectly in your make and model.',
   },
   {
     title: 'Dash Cameras',

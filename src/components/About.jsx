@@ -11,7 +11,7 @@ const features = [
     icon: faCircleCheck,
     title: 'Fully Qualified Auto Electricians',
     description:
-      'Our team of qualified auto electricians with 30 years of experience in the motor industry.',
+      'Our team of qualified auto electricians with 30 years experience in the motor industry.',
   },
   {
     icon: faWrench,
@@ -37,7 +37,7 @@ function About() {
           </div>
           <div className="col-12 text-center text-white px-5">
             <p className="about-us-text">
-              With over 30 years of experience, Airport Auto Electrics stands as
+              With over 30 years experience, Airport Auto Electrics stands as
               one of Dublin's premier specialists in auto electrics. Located in
               North Dublin for the past 27 years. Qualified auto electricians
               ensures that your vehicle receives the utmost care and expertise.
