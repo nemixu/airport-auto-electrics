@@ -8,16 +8,16 @@ const features = [
       'Our team of qualified auto electricians has 30 years of experience in the motor industry.',
   },
   {
-    icon: 'fas fa-euro-sign',
-    title: 'Competitive Prices',
-    description:
-      'We offer extremely competitive prices for our services. Contact us today to get a quote.',
-  },
-  {
     icon: 'fas fa-check-circle',
     title: 'Excellent Service',
     description:
       'Our goal is to provide excellent service with fast and professional completion, minimizing inconvenience and delays.',
+  },
+  {
+    icon: 'fas fa-euro-sign',
+    title: 'Competitive Prices',
+    description:
+      'We offer extremely competitive prices for our services. Contact us today to get a quote.',
   },
 ];
 
