@@ -1,20 +1,26 @@
+import {
+  faCircleCheck,
+  faEuroSign,
+  faWrench,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const features = [
   {
-    icon: 'fas fa-chalkboard-teacher',
+    icon: faCircleCheck,
     title: 'Fully Qualified Auto Electricians',
     description:
       'Our team of qualified auto electricians has 30 years of experience in the motor industry.',
   },
   {
-    icon: 'fas fa-check-circle',
+    icon: faWrench,
     title: 'Excellent Service',
     description:
       'Our goal is to provide excellent service with fast and professional completion, minimizing inconvenience and delays.',
   },
   {
-    icon: 'fas fa-euro-sign',
+    icon: faEuroSign,
     title: 'Competitive Prices',
     description:
       'We offer extremely competitive prices for our services. Contact us today to get a quote.',
@@ -27,7 +33,7 @@ function About() {
       <div className="container">
         <div className="row justify-content-center about-container">
           <div className="col-12 text-center">
-            <h3 className="about-us-header display-4">Who we are</h3>
+            <h3 className="about-us-header display-4">Who We Are</h3>
           </div>
           <div className="col-12 text-center text-white px-5">
             <p className="about-us-text">
@@ -54,7 +60,12 @@ function About() {
                   className="col-sm-12 col-md-4 text-center about-us-statement-box"
                 >
                   <div className="feature about-us-statement-box-inner">
-                    <i className={`feature-icon ${feature.icon}`}></i>
+                    <i className={`feature-icon ${feature.icon}`}>
+                      <FontAwesomeIcon
+                        icon={feature.icon}
+                        className="feature-icon"
+                      />
+                    </i>
                     <h4 className="feature-title text-white">
                       {feature.title}
                     </h4>

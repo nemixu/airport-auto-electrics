@@ -10,7 +10,7 @@ function Contact() {
         <div className="row">
           <div className="col-12 text-center">
             <h3 className="contact-header text-white display-4 mb-5">
-              Get in touch
+              Get In Touch
             </h3>
           </div>
         </div>
