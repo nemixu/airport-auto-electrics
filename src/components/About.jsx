@@ -11,7 +11,7 @@ const features = [
     icon: faCircleCheck,
     title: 'Fully Qualified Auto Electricians',
     description:
-      'Our team of qualified auto electricians has 30 years of experience in the motor industry.',
+      'Our team of qualified auto electricians with 30 years of experience in the motor industry.',
   },
   {
     icon: faWrench,
