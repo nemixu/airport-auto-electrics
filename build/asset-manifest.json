@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b7e5e83e.css",
+    "main.js": "/static/js/main.965551d2.js",
+    "static/media/alternator.png": "/static/media/alternator.0240aa0aba5ac033bfb5.png",
+    "static/media/starter.png": "/static/media/starter.f2a49d8623ff13645695.png",
+    "static/media/reverse.png": "/static/media/reverse.3e7e8fbf4b80ed9462a1.png",
+    "static/media/dash.png": "/static/media/dash.09fd7fae94184c5ec66c.png",
+    "static/media/stereo3.jpeg": "/static/media/stereo3.7a09fa8ebd22fedf606f.jpeg",
+    "static/media/diagnostic.png": "/static/media/diagnostic.167b5c9d6e63d7f50ffe.png",
+    "static/media/tracker.png": "/static/media/tracker.c4d0a2bff41fc7e876b6.png",
+    "static/media/led.png": "/static/media/led.d917d57798384fccbfbc.png",
+    "static/media/sensor.png": "/static/media/sensor.caded631e2e966869ac7.png",
+    "static/media/landing-car.jpg": "/static/media/landing-car.6b2815586661512cdd82.jpg",
+    "static/media/tytan-security.png": "/static/media/tytan-security.ae63782f58bb0c4bc21b.png",
+    "static/media/thinkware.webp": "/static/media/thinkware.29577bb22514c4e5643a.webp",
+    "index.html": "/index.html",
+    "main.b7e5e83e.css.map": "/static/css/main.b7e5e83e.css.map",
+    "main.965551d2.js.map": "/static/js/main.965551d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7e5e83e.css",
+    "static/js/main.965551d2.js"
+  ]
+}
