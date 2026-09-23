@@ -12,7 +12,7 @@ const features = [
     icon: faCircleCheck,
     title: 'Fully Qualified Auto Electricians',
     description:
-      'Our team of qualified auto electricians with 30 years experience in the motor industry.',
+      'Our team of qualified auto electricians with over 38 years experience in the motor industry.',
   },
   {
     icon: faWrench,
@@ -47,8 +47,8 @@ function About() {
               know Irish vehicles inside out.
             </p>
             <p className="about-us-text">
-              We supply and fit car alarms, immobilisers and tracking
-              systems, dash cams, reverse cameras and parking sensors,
+              We are the sole Irish agents for Patrolline car alarms, and we
+              also supply and fit GPS tracking systems, Azdome and Q6 dash cams, reverse cameras and parking sensors,
               Android Auto &amp; Apple CarPlay stereo upgrades, alternators,
               starter motors, and full auto-electrical fault finding and
               diagnostics. Easily reached from Dublin Airport, we offer competitive rates, honest advice and fast

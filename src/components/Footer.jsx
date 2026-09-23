@@ -16,7 +16,7 @@ function Footer() {
             <h2 className="site-footer-heading">Airport Auto Electrics</h2>
             <p className="site-footer-text">
               Auto electricians serving Dublin Airport, Cloghran, Swords and
-              North Dublin for over 30 years.
+              North Dublin for over 38 years.
             </p>
             <p className="site-footer-text">
               Unit 17, Collinstown Cross Industrial Estate, Old Airport Rd,

@@ -289,7 +289,8 @@ a:hover {
 }
 
 .feature-icon {
-  height: 28px;
+  font-size: 28px;
+  height: 1em;
   color: #ff4500;
   margin-bottom: 0;
 }
@@ -436,6 +437,12 @@ a:hover {
   object-fit: contain;
 }
 
+.service-card-icon {
+  font-size: 64px;
+  height: 1em;
+  color: #ff4500;
+}
+
 .service-card-body {
   padding: 24px;
   display: flex;
@@ -536,7 +543,8 @@ a:hover {
 }
 
 .benefit-icon {
-  height: 40px;
+  font-size: 40px;
+  height: 1em;
   color: #ff4500;
   margin-bottom: 15px;
 }
@@ -559,6 +567,53 @@ a:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   height: 100%;
+}
+
+.brand-card-icon {
+  font-size: 32px;
+  height: 1em;
+  color: #ff4500;
+  margin-bottom: 15px;
+}
+
+.brand-showcase {
+  background: linear-gradient(135deg, #14213d 0%, #115169 100%);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.brand-showcase-icon {
+  font-size: 56px;
+  height: 1em;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+.brand-showcase-name {
+  color: #fff;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.brand-showcase-tagline {
+  color: #d8e2ea;
+  margin-bottom: 20px;
+}
+
+.brand-showcase-badge {
+  display: inline-block;
+  background: rgba(255, 69, 0, 0.15);
+  border: 1px solid rgba(255, 69, 0, 0.5);
+  color: #ff8a5c;
+  border-radius: 50px;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0;
 }
 
 .brand-title {

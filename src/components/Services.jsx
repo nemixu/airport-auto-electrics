@@ -1,3 +1,5 @@
+import { faShieldHalved, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Altenator from '../Images/alternator.png';
@@ -6,17 +8,15 @@ import Cam from '../Images/reverse.png';
 import Sensor from '../Images/sensor.png';
 import Starter from '../Images/starter.png';
 import Audio from '../Images/stereo3.jpeg';
-import DashCam from '../Images/thinkware.webp';
-import Security from '../Images/tytan-security.png';
 
 const servicesData = [
   {
-    title: 'Car Alarms & Vehicle Security',
-    image: Security,
+    title: 'Patrolline Car Alarms',
+    icon: faShieldHalved,
     description:
-      'Supplied and fitted car alarms and immobilisers from trusted brands including Tytan, Avital and Sterling, giving Dublin drivers real protection against theft and break-ins.',
+      'Sole agents in Ireland for Patrolline, high-quality Italian-manufactured car alarm systems, supplied and professionally fitted by our qualified auto electricians.',
     link: '/car-alarms',
-    linkText: 'Car alarm systems & pricing',
+    linkText: 'Patrolline car alarm systems',
   },
   {
     title: 'Android Auto Car Audio Upgrades',
@@ -26,9 +26,9 @@ const servicesData = [
   },
   {
     title: 'Dash Cameras',
-    image: DashCam,
+    icon: faVideo,
     description:
-      'Thinkware dash cams supplied and fitted, recording clear front and rear footage so you have evidence on hand after an accident, near-miss or parking knock.',
+      'Azdome and Q6 app-enabled dash cams with parking mode and collision sensors, supplied and fitted so you have evidence on hand after an accident, near-miss or parking knock.',
     link: '/dash-cams',
     linkText: 'Dash cam options & fitting',
   },
@@ -83,12 +83,19 @@ function Services() {
             <div className="col-sm-6 col-lg-4" key={index}>
               <div className="service-card">
                 <div className="service-card-image-wrap">
-                  <img
-                    src={service.image}
-                    alt={`${service.title} fitted by Airport Auto Electrics in Dublin`}
-                    loading="lazy"
-                    className="service-card-image"
-                  />
+                  {service.image ? (
+                    <img
+                      src={service.image}
+                      alt={`${service.title} fitted by Airport Auto Electrics in Dublin`}
+                      loading="lazy"
+                      className="service-card-image"
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={service.icon}
+                      className="service-card-icon"
+                    />
+                  )}
                 </div>
                 <div className="service-card-body">
                   <h3 className="service-card-title">{service.title}</h3>

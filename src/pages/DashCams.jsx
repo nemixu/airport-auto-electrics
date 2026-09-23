@@ -1,7 +1,8 @@
 import {
-  faCarSide,
-  faCircleCheck,
+  faCarBurst,
+  faMobileScreenButton,
   faShieldHalved,
+  faSquareParking,
   faVideo,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +12,6 @@ import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
-import DashCamImage from '../Images/thinkware.webp';
 import { faqSchema, localBusinessSchema, serviceSchema } from '../seoData';
 
 const benefits = [
@@ -19,48 +19,53 @@ const benefits = [
     icon: faShieldHalved,
     title: 'Clear Evidence After an Accident',
     description:
-      'Front and rear dash cam footage gives you clear evidence for insurance claims if you are involved in a collision, whether it is your fault or not.',
+      'Dash cam footage gives you clear evidence for insurance claims if you are involved in a collision, whether it is your fault or not.',
   },
   {
-    icon: faCarSide,
-    title: 'Parking Mode Protection',
+    icon: faSquareParking,
+    title: 'Parking Mode',
     description:
-      'Thinkware dash cams can monitor your car while it is parked, recording knocks, bumps and attempted break-ins even when the engine is off.',
+      'Our dash cams include parking mode, keeping watch over your car while it is parked so knocks, bumps and break-ins are on record.',
   },
   {
-    icon: faVideo,
-    title: 'Front & Rear Recording',
+    icon: faCarBurst,
+    title: 'Collision Sensor',
     description:
-      'We fit dual-channel systems that record the road ahead and behind, useful for busy Dublin traffic, junctions and reversing.',
+      'A built-in collision sensor detects an impact and automatically protects the recording, so the footage that matters is not lost.',
   },
   {
-    icon: faCircleCheck,
-    title: 'Neat, Professional Fitting',
+    icon: faMobileScreenButton,
+    title: 'App Enabled',
     description:
-      'Cabling is run and hidden properly so the camera looks factory-fitted, not taped to your windscreen with wires hanging everywhere.',
+      'Connect to your dash cam from your smartphone through the app to view, download and share footage without removing the memory card.',
   },
 ];
 
 const faqItems = [
   {
-    question: 'Which dash cam do you recommend?',
+    question: 'What dash cams do you supply and fit?',
     answer:
-      'We supply and fit Thinkware dash cams, a well-regarded brand for image quality and reliability. We can recommend a front-only or front-and-rear system based on your car and budget.',
+      'We supply and fit Azdome and Q6 dash cams. Both are app enabled and come with parking mode and a collision sensor. Call us and we will recommend the right one for your car.',
   },
   {
-    question: 'Do dash cams work while my car is parked?',
+    question: 'Do your dash cams work while my car is parked?',
     answer:
-      "Yes. Thinkware dash cams support parking mode, which can record impacts and motion around your car while it's parked, using either a hardwire kit or the camera's internal battery depending on the model.",
+      'Yes. Our Azdome and Q6 dash cams have parking mode, so they can keep watch over your car while it is parked. We will set the camera up to suit your vehicle when we fit it.',
   },
   {
-    question: 'How long does dash cam fitting take?',
+    question: 'What does the collision sensor do?',
     answer:
-      'A standard front dash cam fit usually takes a couple of hours at our Cloghran workshop near Dublin Airport. A front and rear system with hidden cabling takes a little longer. We will confirm timing when you book.',
+      'The collision sensor detects a sudden impact, such as a crash or a knock while parked, and automatically protects the recording so it is not overwritten.',
+  },
+  {
+    question: 'What does app enabled mean?',
+    answer:
+      'You can connect the dash cam to the app on your smartphone to view, download and share your footage, rather than having to remove the memory card and use a computer.',
   },
   {
     question: 'Can you hide the dash cam wiring?',
     answer:
-      'Yes, we route and hide the cabling behind trim and headlining so the finish looks clean and tidy, rather than leaving a visible cable running down your windscreen.',
+      'Yes, we route and hide the cabling behind trim so the finish looks clean and tidy, rather than leaving a visible cable running down your windscreen.',
   },
   {
     question: 'Will a dash cam help with my insurance claim?',
@@ -71,12 +76,12 @@ const faqItems = [
 
 function DashCams() {
   const description =
-    'Thinkware dash cams supplied and fitted in Dublin. Front and rear dash cameras with parking mode, neatly fitted by qualified auto electricians near Dublin Airport and Cloghran.';
+    'Azdome and Q6 app-enabled dash cams with parking mode and collision sensors, supplied and fitted in Dublin by qualified auto electricians near Dublin Airport and Cloghran.';
 
   return (
     <>
       <SEO
-        title="Dash Cam Fitting Dublin | Thinkware Dash Cams | Airport Auto Electrics"
+        title="Dash Cam Fitting Dublin | Azdome & Q6 Dash Cams | Airport Auto Electrics"
         description={description}
         path="/dash-cams"
         jsonLd={[
@@ -85,6 +90,7 @@ function DashCams() {
             name: 'Dash Cam Supply & Fitting',
             description,
             path: '/dash-cams',
+            brands: ['Azdome', 'Q6'],
           }),
           faqSchema(faqItems),
         ]}
@@ -92,8 +98,8 @@ function DashCams() {
 
       <PageHero
         eyebrow="Dash Cameras"
-        title="Dash Cam Supply & Fitting in Dublin"
-        subtitle="Thinkware dash cams, neatly fitted with hidden wiring, supplied by qualified auto electricians near Dublin Airport and Cloghran."
+        title="Azdome & Q6 Dash Cam Fitting in Dublin"
+        subtitle="App-enabled dash cams with parking mode and collision sensors, neatly fitted by qualified auto electricians near Dublin Airport and Cloghran."
       />
 
       <section className="page-section">
@@ -107,22 +113,32 @@ function DashCams() {
                 A dash cam is one of the most useful pieces of kit you can add
                 to your car. It gives you an independent record of what
                 happened if you are involved in a collision, a dispute over
-                fault, or an attempted insurance scam, and can also capture
-                incidents while your car is parked.
+                fault, or an attempted insurance scam, and with parking mode
+                and a collision sensor it can also capture incidents while
+                your car is parked.
               </p>
               <p className="page-section-text">
-                We supply and fit Thinkware dash cams from our workshop in
-                Cloghran, next to Dublin Airport, for drivers across Swords,
-                Santry and North Dublin who want reliable, well-fitted
-                cameras rather than a cheap suction-mounted unit.
+                We supply and fit Azdome and Q6 dash cams from our workshop
+                in Cloghran, next to Dublin Airport. Every camera is app
+                enabled and fitted neatly with hidden wiring, rather than
+                left as a cheap suction-mounted unit with cables hanging
+                across your windscreen.
               </p>
             </div>
-            <div className="col-md-6 text-center">
-              <img
-                src={DashCamImage}
-                alt="Thinkware dash cam supplied and fitted by Airport Auto Electrics in Dublin"
-                className="page-section-image"
-              />
+            <div className="col-md-6">
+              <div className="brand-showcase">
+                <FontAwesomeIcon
+                  icon={faVideo}
+                  className="brand-showcase-icon"
+                />
+                <p className="brand-showcase-name">Azdome &amp; Q6</p>
+                <p className="brand-showcase-tagline">
+                  App-enabled dash cams
+                </p>
+                <p className="brand-showcase-badge">
+                  Parking mode &middot; Collision sensor
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -156,9 +172,8 @@ function DashCams() {
             Also Fitting Reverse Cameras & Parking Sensors
           </h2>
           <p className="page-section-text">
-            If you are covering your car for reversing and parking as well as
-            journeys, we also install reverse cameras and parking sensors.
-            See our full{' '}
+            If you want cover for reversing and parking as well as journeys,
+            we also install reverse cameras and parking sensors. See our full{' '}
             <Link to="/#services">range of auto electrical services</Link>,
             or ask us about combining a dash cam and reverse camera fit in one
             visit.

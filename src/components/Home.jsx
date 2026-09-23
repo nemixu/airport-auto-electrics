@@ -10,7 +10,7 @@ function Home() {
     <>
       <SEO
         title="Airport Auto Electrics | Auto Electricians Dublin Airport & North Dublin"
-        description="Airport Auto Electrics is North Dublin's trusted auto electrician, based next to Dublin Airport. Car alarms, immobilisers, dash cams, reverse cameras, alternators, starter motors and fault finding, fitted by qualified electricians with 30+ years' experience."
+        description="Airport Auto Electrics is North Dublin's trusted auto electrician, based next to Dublin Airport. Sole Irish agents for Patrolline car alarms. Azdome & Q6 dash cams, reverse cameras, alternators, starter motors and fault finding, fitted by qualified electricians with 38+ years' experience."
         path="/"
         jsonLd={localBusinessSchema('/')}
       />
@@ -23,7 +23,7 @@ function Home() {
               </h1>
               <p className="sub-landing-text text-white">
                 Dublin Airport &amp; North Dublin's trusted auto electricians
-                &mdash; car alarms, dash cams &amp; vehicle electrics
+                &mdash; Patrolline car alarms, dash cams &amp; vehicle electrics
               </p>
               <a
                 href="tel:+353872309097"

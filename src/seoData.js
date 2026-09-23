@@ -68,13 +68,16 @@ export const faqSchema = (items) => ({
   })),
 });
 
-export const serviceSchema = ({ name, description, path, image }) => ({
+export const serviceSchema = ({ name, description, path, image, brands }) => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: name,
   name: `${name} | ${BUSINESS_NAME}`,
   description,
   image: image ? `${SITE_URL}${image}` : undefined,
+  brand: brands
+    ? brands.map((brandName) => ({ '@type': 'Brand', name: brandName }))
+    : undefined,
   url: `${SITE_URL}${path}`,
   provider: {
     '@type': 'AutomotiveBusiness',
