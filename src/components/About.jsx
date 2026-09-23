@@ -40,8 +40,8 @@ function About() {
             </h2>
             <p className="about-us-text">
               Airport Auto Electrics has been North Dublin&apos;s go-to auto
-              electrician for over 30 years, working out of Cloghran on the
-              doorstep of Dublin Airport for the last 27 of them. Every job,
+              electrician for over 38 years, working out of Cloghran on the
+              doorstep of Dublin Airport for the last 30 of them. Every job,
               from a simple fault to a full security system install, is
               carried out by qualified, time-served auto electricians who
               know Irish vehicles inside out.
@@ -51,10 +51,8 @@ function About() {
               systems, dash cams, reverse cameras and parking sensors,
               Android Auto &amp; Apple CarPlay stereo upgrades, alternators,
               starter motors, and full auto-electrical fault finding and
-              diagnostics. Easily reached from Dublin Airport, the M50 and
-              M1, we offer competitive rates, honest advice and fast
-              turnaround for drivers across Cloghran, Swords, Santry and
-              greater Dublin.
+              diagnostics. Easily reached from Dublin Airport, we offer competitive rates, honest advice and fast
+              turnaround for drivers across Dublin, Co.Dublin and surrounding areas.
             </p>
           </div>
           <div className="col-lg-6 text-center">
