@@ -10,6 +10,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
+import MobileServiceBanner from '../components/MobileServiceBanner';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
 import { faqSchema, localBusinessSchema, serviceSchema } from '../seoData';
@@ -31,7 +32,7 @@ const patrollineHighlights = [
     icon: faScrewdriverWrench,
     title: 'Professionally Fitted',
     description:
-      'Every Patrolline system is installed at our Cloghran workshop by qualified auto electricians, wired in properly rather than as an afterthought.',
+      'Every Patrolline system is installed by qualified auto electricians, at our Cloghran workshop or at your door, wired in properly rather than as an afterthought.',
   },
 ];
 
@@ -74,6 +75,11 @@ const faqItems = [
       'Airport Auto Electrics is the sole Patrolline agent in Ireland. Call us on 087 230 90 97 or call into our workshop in Cloghran, near Dublin Airport, to arrange supply and fitting.',
   },
   {
+    question: 'Do you offer a mobile car alarm fitting service?',
+    answer:
+      'Yes. We offer a mobile service, so we can come to you and fit your Patrolline car alarm at a time that suits you. Call us on 087 230 90 97 to arrange it.',
+  },
+  {
     question: 'How much does it cost to fit a car alarm?',
     answer:
       'Pricing depends on your vehicle and the system that suits it best. Call us on 087 230 90 97 with your vehicle details and we will give you a clear quote.',
@@ -81,7 +87,7 @@ const faqItems = [
   {
     question: 'How long does fitting a car alarm take?',
     answer:
-      'Fitting time depends on the vehicle and the system chosen. We will confirm how long your car will be with us when you book it in at our Cloghran workshop.',
+      'Fitting time depends on the vehicle and the system chosen. We will confirm timings when you book, whether you bring the car to our Cloghran workshop or use our mobile service.',
   },
   {
     question: 'Can you fit a Patrolline alarm to my car?',
@@ -97,7 +103,7 @@ const faqItems = [
 
 function CarAlarms() {
   const description =
-    'Patrolline car alarms in Ireland. Airport Auto Electrics is the sole Irish agent for Patrolline, high-quality Italian-manufactured car alarm systems, supplied and fitted near Dublin Airport.';
+    'Patrolline car alarms in Ireland. Airport Auto Electrics is the sole Irish agent for Patrolline, high-quality Italian-manufactured car alarm systems, supplied and fitted near Dublin Airport, or at your door with our mobile fitting service.';
 
   return (
     <>
@@ -112,6 +118,7 @@ function CarAlarms() {
             description,
             path: '/car-alarms',
             brands: ['Patrolline'],
+            mobile: true,
           }),
           faqSchema(faqItems),
         ]}
@@ -211,6 +218,8 @@ function CarAlarms() {
           </p>
         </div>
       </section>
+
+      <MobileServiceBanner />
 
       <FAQSection heading="Patrolline Car Alarm FAQs" items={faqItems} />
 

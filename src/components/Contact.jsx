@@ -1,8 +1,8 @@
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGoogle, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { GOOGLE_BUSINESS_URL } from '../seoData';
+import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL } from '../seoData';
 
 function Contact() {
   return (
@@ -49,6 +49,17 @@ function Contact() {
                 >
                   <FontAwesomeIcon icon={faFacebook} className="icon-colour" />
                   <span className="px-2">Facebook Messenger</span>
+                </a>
+              </div>
+              <div className="contact-items">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-link"
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="icon-colour" />
+                  <span className="px-2">@airportautoelec on Instagram</span>
                 </a>
               </div>
               <div className="contact-items">

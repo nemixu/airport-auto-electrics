@@ -1,9 +1,9 @@
-import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGoogle, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GOOGLE_BUSINESS_URL } from '../seoData';
+import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL } from '../seoData';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -16,7 +16,7 @@ function Footer() {
             <h2 className="site-footer-heading">Airport Auto Electrics</h2>
             <p className="site-footer-text">
               Auto electricians serving Dublin Airport, Cloghran, Swords and
-              North Dublin for over 38 years.
+              North Dublin for over 38 years. Mobile fitting available &mdash; we come to you.
             </p>
             <p className="site-footer-text">
               Unit 17, Collinstown Cross Industrial Estate, Old Airport Rd,
@@ -73,6 +73,15 @@ function Footer() {
             >
               <FontAwesomeIcon icon={faFacebook} className="icon-colour" />
               <span className="px-2">Facebook Messenger</span>
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="site-footer-contact-link"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="icon-colour" />
+              <span className="px-2">@airportautoelec on Instagram</span>
             </a>
           </div>
         </div>

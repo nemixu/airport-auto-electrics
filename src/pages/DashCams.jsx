@@ -10,6 +10,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
+import MobileServiceBanner from '../components/MobileServiceBanner';
 import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
 import { faqSchema, localBusinessSchema, serviceSchema } from '../seoData';
@@ -63,6 +64,11 @@ const faqItems = [
       'You can connect the dash cam to the app on your smartphone to view, download and share your footage, rather than having to remove the memory card and use a computer.',
   },
   {
+    question: 'Can you fit a dash cam at my home or workplace?',
+    answer:
+      'Yes. We offer a mobile fitting service, so we can come to you and install your dash cam at a time that suits you. Call us on 087 230 90 97 to arrange it.',
+  },
+  {
     question: 'Can you hide the dash cam wiring?',
     answer:
       'Yes, we route and hide the cabling behind trim so the finish looks clean and tidy, rather than leaving a visible cable running down your windscreen.',
@@ -76,7 +82,7 @@ const faqItems = [
 
 function DashCams() {
   const description =
-    'Azdome and Q6 app-enabled dash cams with parking mode and collision sensors, supplied and fitted in Dublin by qualified auto electricians near Dublin Airport and Cloghran.';
+    'Azdome and Q6 app-enabled dash cams with parking mode and collision sensors, supplied and fitted in Dublin by qualified auto electricians near Dublin Airport and Cloghran, or at your door with our mobile fitting service.';
 
   return (
     <>
@@ -91,6 +97,7 @@ function DashCams() {
             description,
             path: '/dash-cams',
             brands: ['Azdome', 'Q6'],
+            mobile: true,
           }),
           faqSchema(faqItems),
         ]}
@@ -118,8 +125,9 @@ function DashCams() {
                 your car is parked.
               </p>
               <p className="page-section-text">
-                We supply and fit Azdome and Q6 dash cams from our workshop
-                in Cloghran, next to Dublin Airport. Every camera is app
+                We supply and fit Azdome and Q6 dash cams at our workshop
+                in Cloghran, next to Dublin Airport, or at your door with our
+                mobile service. Every camera is app
                 enabled and fitted neatly with hidden wiring, rather than
                 left as a cheap suction-mounted unit with cables hanging
                 across your windscreen.
@@ -180,6 +188,8 @@ function DashCams() {
           </p>
         </div>
       </section>
+
+      <MobileServiceBanner />
 
       <FAQSection heading="Dash Cam FAQs" items={faqItems} />
 

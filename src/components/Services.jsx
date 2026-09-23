@@ -1,4 +1,4 @@
-import { faShieldHalved, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faShieldHalved, faVanShuttle, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -55,6 +55,12 @@ const servicesData = [
     image: Sensor,
     description:
       'Front and rear parking sensor fitting for extra confidence when parking in busy Dublin streets and car parks.',
+  },
+  {
+    title: 'Mobile Fitting Service',
+    icon: faVanShuttle,
+    description:
+      'Cannot get to us? We come to you and install at your convenience, so you can get a car alarm, dash cam or other fitting done without losing your day.',
   },
   {
     title: 'Auto Electrical Fault Finding',

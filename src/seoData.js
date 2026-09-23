@@ -11,6 +11,7 @@ export const BUSINESS_ADDRESS = {
   postalCode: '',
   addressCountry: 'IE',
 };
+export const INSTAGRAM_URL = 'https://www.instagram.com/airportautoelec/';
 export const GOOGLE_BUSINESS_URL = 'https://www.google.com/maps?cid=16022040228269042277';
 
 export const OPENING_HOURS_SPECIFICATION = [
@@ -44,6 +45,7 @@ export const localBusinessSchema = (path = '/') => ({
     longitude: -6.240260384007048,
   },
   hasMap: GOOGLE_BUSINESS_URL,
+  sameAs: [INSTAGRAM_URL],
   openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
   areaServed: [
     'Dublin Airport',
@@ -53,6 +55,8 @@ export const localBusinessSchema = (path = '/') => ({
     'North Dublin',
     'Dublin',
   ],
+  description:
+    'Auto electricians near Dublin Airport offering a mobile fitting service: we come to you and install at your convenience.',
 });
 
 export const faqSchema = (items) => ({
@@ -68,7 +72,7 @@ export const faqSchema = (items) => ({
   })),
 });
 
-export const serviceSchema = ({ name, description, path, image, brands }) => ({
+export const serviceSchema = ({ name, description, path, image, brands, mobile }) => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: name,
@@ -79,6 +83,15 @@ export const serviceSchema = ({ name, description, path, image, brands }) => ({
     ? brands.map((brandName) => ({ '@type': 'Brand', name: brandName }))
     : undefined,
   url: `${SITE_URL}${path}`,
+  availableChannel: mobile
+    ? [
+        { '@type': 'ServiceChannel', name: 'At our workshop in Cloghran, Dublin' },
+        {
+          '@type': 'ServiceChannel',
+          name: 'Mobile fitting - we come to you and install at your convenience',
+        },
+      ]
+    : undefined,
   provider: {
     '@type': 'AutomotiveBusiness',
     '@id': `${SITE_URL}/#business`,
