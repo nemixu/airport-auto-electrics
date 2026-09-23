@@ -1,13 +1,16 @@
 import {
   faBars,
+  faBell,
   faCartShopping,
   faCircleInfo,
   faHouse,
   faPhone,
+  faVideo,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function MobileNavbar() {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
@@ -25,18 +28,9 @@ function MobileNavbar() {
     setNavBackgroundVisible(false);
   };
 
-  const handleMobileNavItemClick = (event, targetId) => {
-    event.preventDefault();
+  const closeMobileNav = () => {
     setMobileNavOpen(false);
     setNavBackgroundVisible(false);
-    scrollToSection(targetId);
-  };
-
-  const scrollToSection = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   useEffect(() => {
@@ -85,48 +79,70 @@ function MobileNavbar() {
         <div className="mobile-nav-inner">
           <ul className="mobile-nav-links">
             <li className="mobile-nav-link-items text-white">
-              <a
+              <Link
                 className="text-white anchor-fill"
                 aria-label="home"
-                href="#home"
-                onClick={(event) => handleMobileNavItemClick(event, 'home')}
+                to="/#home"
+                onClick={closeMobileNav}
               >
                 <FontAwesomeIcon icon={faHouse} />
                 <span className="nav-link-text px-2">Home</span>
-              </a>
+              </Link>
             </li>
             <li className="mobile-nav-link-items text-white">
-              <a
+              <Link
                 className="text-white anchor-fill"
-                aria-label="classNamees"
-                href="#about"
-                onClick={(event) => handleMobileNavItemClick(event, 'about')}
+                aria-label="about"
+                to="/#about"
+                onClick={closeMobileNav}
               >
                 <FontAwesomeIcon icon={faCircleInfo} />
                 <span className="nav-link-text px-2">About</span>
-              </a>
+              </Link>
             </li>
             <li className="mobile-nav-link-items text-white">
-              <a
+              <Link
                 className="text-white anchor-fill"
                 aria-label="services"
-                href="#services"
-                onClick={(event) => handleMobileNavItemClick(event, 'services')}
+                to="/#services"
+                onClick={closeMobileNav}
               >
                 <FontAwesomeIcon icon={faCartShopping} />
                 <span className="nav-link-text px-2">Services</span>
-              </a>
+              </Link>
             </li>
             <li className="mobile-nav-link-items text-white">
-              <a
+              <Link
+                className="text-white anchor-fill"
+                aria-label="car alarms"
+                to="/car-alarms"
+                onClick={closeMobileNav}
+              >
+                <FontAwesomeIcon icon={faBell} />
+                <span className="nav-link-text px-2">Car Alarms</span>
+              </Link>
+            </li>
+            <li className="mobile-nav-link-items text-white">
+              <Link
+                className="text-white anchor-fill"
+                aria-label="dash cams"
+                to="/dash-cams"
+                onClick={closeMobileNav}
+              >
+                <FontAwesomeIcon icon={faVideo} />
+                <span className="nav-link-text px-2">Dash Cams</span>
+              </Link>
+            </li>
+            <li className="mobile-nav-link-items text-white">
+              <Link
                 className="text-white anchor-fill"
                 aria-label="contact"
-                href="#contact"
-                onClick={(event) => handleMobileNavItemClick(event, 'contact')}
+                to="/#contact"
+                onClick={closeMobileNav}
               >
                 <FontAwesomeIcon icon={faPhone} />
                 <span className="nav-link-text px-2">Contact</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

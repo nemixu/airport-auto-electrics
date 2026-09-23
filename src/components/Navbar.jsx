@@ -1,65 +1,48 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../Images/blue-orange-logo.png';
 import MobileNavbar from './MobileNavbar';
 
 function Navbar() {
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleNavClick = (event, id) => {
-    event.preventDefault();
-    scrollToSection(id);
-  };
-
   return (
     <nav className="nav-main justify-content-around fixed-top w-100">
       <div className="nav-main-logo">
-        <a aria-label="Home" href="#home">
-          <img className="logo-img" src={logo} alt="Logo of the website" />
-        </a>
+        <Link aria-label="Home" to="/">
+          <img className="logo-img" src={logo} alt="Airport Auto Electrics logo" />
+        </Link>
       </div>
       <div className="nav-main-inner d-none d-md-flex">
         <div className="nav-main-list">
           <ul className="nav-main-list-container">
             <li className="nav-main-list-items">
-              <a
-                aria-label="home"
-                href="#home"
-                onClick={(event) => handleNavClick(event, 'home')}
-              >
+              <Link aria-label="home" to="/#home">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-main-list-items">
-              <a
-                aria-label="about"
-                href="#about"
-                onClick={(event) => handleNavClick(event, 'about')}
-              >
+              <Link aria-label="about" to="/#about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-main-list-items">
-              <a
-                aria-label="services"
-                href="#services"
-                onClick={(event) => handleNavClick(event, 'services')}
-              >
+              <Link aria-label="services" to="/#services">
                 Services
-              </a>
+              </Link>
             </li>
             <li className="nav-main-list-items">
-              <a
-                aria-label="contact"
-                href="#contact"
-                onClick={(event) => handleNavClick(event, 'contact')}
-              >
+              <Link aria-label="car alarms" to="/car-alarms">
+                Car Alarms
+              </Link>
+            </li>
+            <li className="nav-main-list-items">
+              <Link aria-label="dash cams" to="/dash-cams">
+                Dash Cams
+              </Link>
+            </li>
+            <li className="nav-main-list-items">
+              <Link aria-label="contact" to="/#contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -79,4 +62,3 @@ function Navbar() {
 }
 
 export default Navbar;
-//test

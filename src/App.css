@@ -85,68 +85,8 @@
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-.about-us {
-  background: #115169;
-  padding-bottom: 100px;
-}
-
-.about-container {
-  padding: 0 200px 0 200px;
-}
-
-.about-us-header {
-  padding-top: 100px;
-  color: #fff;
-}
-
-.icons {
-  font-size: 2em;
-  color: #fff;
-  text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
-  color: #ff4500;
-}
 .icon-colour {
   color: #ff4500;
-}
-
-.about-us-statement-box {
-  align-items: center;
-  display: flex;
-  background: #115169;
-  border-radius: 10px;
-  height: 300px;
-  width: 300px;
-  position: relative;
-  margin: 15px;
-  /* box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4); */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-us-statement-box-inner {
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.services {
-  padding-bottom: 100px;
-  position: relative;
-}
-
-.services-header {
-  padding-top: 100px;
-  color: #14213d;
-}
-
-.services-text {
-  color: #14213d;
-}
-
-.services-images {
-  height: 140px;
-  width: 140px;
-  padding-bottom: 50px;
 }
 
 .contact {
@@ -299,63 +239,6 @@ a:hover {
   flex-direction: column;
 }
 
-.services {
-  padding: 80px 0;
-}
-
-.services-header {
-  text-align: center;
-  color: #14213d;
-}
-
-.service-card {
-  justify-content: center;
-  height: 400px;
-  width: 450px;
-  margin-bottom: 30px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card .card-img-top {
-  padding-top: 20px;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 10px 10px 0 0;
-}
-
-.service-card .card-body {
-  text-align: center;
-}
-
-.service-card .card-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.service-card .card-text {
-  color: #6c757d;
-}
-
-/* .service-card button {
-  background-color: #ff4500;
-  border-color: #ff4500;
-  color: #fff;
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-}
-
-.service-card button:hover {
-  background-color: #ff450094;
-  border-color: #ff450094;
-} */
-
 .contact {
   padding: 80px 0;
   background: #115169;
@@ -406,13 +289,443 @@ a:hover {
 }
 
 .feature-icon {
-  height: 50px;
+  height: 28px;
   color: #ff4500;
+  margin-bottom: 0;
+}
+
+/* Shared uppercase label used above section headings */
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff4500;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+/* About section */
+.about-us {
+  background: linear-gradient(135deg, #14213d 0%, #115169 100%);
+  padding: 90px 0;
+}
+
+.about-intro-row {
+  margin-bottom: 60px;
+}
+
+.about-us-header {
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 1366px) {
-  .about-container {
-    padding: 0;
+.about-us-text {
+  color: #d8e2ea;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.about-us-image {
+  max-width: 100%;
+  max-height: 340px;
+  border-radius: 14px;
+}
+
+.about-feature-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 35px 25px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about-feature-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 69, 0, 0.15);
+  margin-bottom: 18px;
+}
+
+.feature-title {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: #c3ccd6;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .about-intro-row {
+    text-align: center;
+  }
+
+  .about-us-image {
+    margin-top: 30px;
+  }
+}
+
+/* Services section */
+.services {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.services-heading-wrap {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.services-header {
+  color: #14213d;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.services-subheading {
+  color: #5b6470;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.service-card-image-wrap {
+  background: #f5f7f9;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-card-image {
+  max-height: 140px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.service-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #14213d;
+  margin-bottom: 10px;
+}
+
+.service-card-text {
+  color: #5b6470;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Service card "learn more" link */
+.service-card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff4500;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.service-card-link:hover {
+  color: #14213d;
+  text-decoration: underline;
+}
+
+/* Page hero (Car Alarms / Dash Cams / 404) */
+.page-hero {
+  background: linear-gradient(135deg, #14213d 0%, #115169 100%);
+  padding: 190px 0 80px;
+  color: #fff;
+}
+
+.page-hero-title {
+  color: #fff;
+  font-weight: 700;
+}
+
+.page-hero-subtitle {
+  color: #d8e2ea;
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.15rem;
+}
+
+/* Generic content sections used on service pages */
+.page-section {
+  padding: 80px 0;
+}
+
+.page-section-alt {
+  background: #f5f7f9;
+}
+
+.page-section-heading {
+  color: #14213d;
+  font-weight: 700;
+}
+
+.page-section-text {
+  color: #3a3f4b;
+  line-height: 1.7;
+}
+
+.page-section-image {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+.page-section-image-small {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.not-found-section {
+  padding-top: 190px;
+  min-height: 60vh;
+}
+
+/* Benefit & brand cards */
+.benefit-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.benefit-icon {
+  height: 40px;
+  color: #ff4500;
+  margin-bottom: 15px;
+}
+
+.benefit-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #14213d;
+  margin-bottom: 10px;
+}
+
+.benefit-description {
+  color: #3a3f4b;
+  font-size: 0.95rem;
+}
+
+.brand-card {
+  background: #115169;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+}
+
+.brand-title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.brand-description {
+  color: #d8e2ea;
+}
+
+/* FAQ accordion */
+.faq-section {
+  padding: 80px 0;
+  background: #f5f7f9;
+}
+
+.faq-heading {
+  color: #14213d;
+  font-weight: 700;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px 25px;
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: 600;
+  color: #14213d;
+  list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  float: right;
+  color: #ff4500;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '\2212';
+}
+
+.faq-answer {
+  color: #3a3f4b;
+  margin-top: 15px;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* CTA section */
+.cta-section {
+  padding: 80px 0;
+  background: #14213d;
+  color: #fff;
+}
+
+.cta-heading {
+  color: #fff;
+  font-weight: 700;
+}
+
+.cta-text {
+  color: #d8e2ea;
+  max-width: 600px;
+  margin: 15px auto 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-google-review {
+  color: #14213d;
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-google-review:hover {
+  color: #14213d;
+  background-color: #e9e9e9;
+  border-color: #e9e9e9;
+}
+
+/* Site footer */
+.site-footer {
+  background: #0d1626;
+  padding: 60px 0 20px;
+}
+
+.site-footer-col {
+  margin-bottom: 30px;
+}
+
+.site-footer-heading {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.site-footer-text {
+  color: #a9b3c1;
+  font-size: 0.95rem;
+}
+
+.site-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer-links li {
+  margin-bottom: 10px;
+}
+
+.site-footer-links a {
+  color: #a9b3c1;
+  text-decoration: none;
+}
+
+.site-footer-links a:hover {
+  color: #ff4500;
+}
+
+.site-footer-contact-link {
+  display: flex;
+  align-items: center;
+  color: #a9b3c1;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.site-footer-contact-link:hover {
+  color: #ff4500;
+}
+
+.site-footer-copyright {
+  color: #6b7585;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .page-hero {
+    padding: 150px 0 60px;
   }
 }

@@ -1,60 +1,66 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Altenator from '../Images/alternator.png';
-import Dash from '../Images/dash.png';
 import Fault from '../Images/diagnostic.png';
-import LED from '../Images/led.png';
 import Cam from '../Images/reverse.png';
 import Sensor from '../Images/sensor.png';
 import Starter from '../Images/starter.png';
 import Audio from '../Images/stereo3.jpeg';
 import DashCam from '../Images/thinkware.webp';
-import Tracker from '../Images/tracker.png';
 import Security from '../Images/tytan-security.png';
 
 const servicesData = [
   {
-    title: 'Vehicle Security Systems',
+    title: 'Car Alarms & Vehicle Security',
     image: Security,
     description:
-      'We offer a wide range of car security systems from leading systems from Tytan Car alarms, Avital Car alarms and Sterling Car imobilizers',
+      'Supplied and fitted car alarms and immobilisers from trusted brands including Tytan, Avital and Sterling, giving Dublin drivers real protection against theft and break-ins.',
+    link: '/car-alarms',
+    linkText: 'Car alarm systems & pricing',
   },
   {
     title: 'Android Auto Car Audio Upgrades',
     image: Audio,
     description:
-      'We offer in car Audio upgrades with the most recent 7 inch, 9 inch and 10 inch car screens running Android which features android auto & apple carplay. Car specific upgrades to fit perfectly in your make and model.',
+      'In-car audio upgrades with 7", 9" and 10" Android touchscreens featuring Android Auto and Apple CarPlay, professionally fitted to suit your exact make and model.',
   },
   {
     title: 'Dash Cameras',
     image: DashCam,
     description:
-      'We offer Thinkware Dashcams supplied and fitted to ensure you are safe and protected on the roads.',
+      'Thinkware dash cams supplied and fitted, recording clear front and rear footage so you have evidence on hand after an accident, near-miss or parking knock.',
+    link: '/dash-cams',
+    linkText: 'Dash cam options & fitting',
   },
   {
     title: 'Starter Motors',
     image: Starter,
-    description: 'We repair and provide new starter motors',
+    description:
+      'Diagnosis, repair and replacement of car starter motors, keeping your vehicle starting reliably every time.',
   },
   {
     title: 'Alternators',
     image: Altenator,
-    description: 'We repair and provide new alternators',
+    description:
+      'Alternator testing, repair and replacement to keep your battery charged and your electrics running properly.',
   },
   {
     title: 'Reverse Cameras',
     image: Cam,
-    description: 'We install reverse cameras for improved rearview visibility',
+    description:
+      'Reverse camera installation for clearer rearview visibility, making tight parking spaces and reversing safer.',
   },
   {
     title: 'Reverse Sensors',
     image: Sensor,
-    description: 'We install reverse sensors for better parking assistance',
+    description:
+      'Front and rear parking sensor fitting for extra confidence when parking in busy Dublin streets and car parks.',
   },
   {
-    title: 'Fault Finding',
+    title: 'Auto Electrical Fault Finding',
     image: Fault,
     description:
-      'We specialize in fault finding and diagnostics for vehicle electrical systems',
+      'Expert fault finding and diagnostics for wiring, sensor and electrical issues across all vehicle makes and models.',
   },
 ];
 
@@ -62,27 +68,36 @@ function Services() {
   return (
     <section className="services" id="services">
       <div className="container">
-        <h3 className="services-header display-4 mb-5">What We Do</h3>
-        <div className="row">
+        <div className="text-center services-heading-wrap">
+          <p className="section-eyebrow">What We Do</p>
+          <h2 className="services-header">
+            Auto Electrical Services in Dublin
+          </h2>
+          <p className="services-subheading">
+            From vehicle security to full auto-electrical diagnostics, here
+            is everything we supply and fit at our Cloghran workshop.
+          </p>
+        </div>
+        <div className="row g-4">
           {servicesData.map((service, index) => (
-            <div
-              className={`col-sm-6 col-md-6 d-flex align-items-stretch ${
-                index % 2 === 0 ? 'justify-content-end' : ''
-              }`}
-              key={index}
-            >
-              <div className="card service-card">
-                <img
-                  src={service.image}
-                  className="card-img-top"
-                  alt={service.title}
-                />
-                <div className="card-body d-flex flex-column justify-content-between">
-                  <div>
-                    <h5 className="card-title">{service.title}</h5>
-                    <p className="card-text">{service.description}</p>
-                  </div>
-                  {/* <button className="btn btn-primary">Learn More</button> */}
+            <div className="col-sm-6 col-lg-4" key={index}>
+              <div className="service-card">
+                <div className="service-card-image-wrap">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} fitted by Airport Auto Electrics in Dublin`}
+                    loading="lazy"
+                    className="service-card-image"
+                  />
+                </div>
+                <div className="service-card-body">
+                  <h3 className="service-card-title">{service.title}</h3>
+                  <p className="service-card-text">{service.description}</p>
+                  {service.link && (
+                    <Link to={service.link} className="service-card-link">
+                      {service.linkText} &rarr;
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

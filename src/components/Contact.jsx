@@ -1,7 +1,8 @@
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { GOOGLE_BUSINESS_URL } from '../seoData';
 
 function Contact() {
   return (
@@ -9,9 +10,9 @@ function Contact() {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
-            <h3 className="contact-header text-white display-4 mb-5">
+            <h2 className="contact-header text-white display-4 mb-5">
               Get In Touch
-            </h3>
+            </h2>
           </div>
         </div>
         <div className="row">
@@ -19,7 +20,8 @@ function Contact() {
             <div className="contact-info">
               <p className="balance">
                 Unit 17, Collinstown Cross Industrial Estate, Old Airport Rd,
-                Cloghran, Dublin
+                Cloghran, Dublin &mdash; minutes from Dublin Airport, the M50
+                and M1
               </p>
               <div className="contact-items">
                 <a href="tel:+353872309097">
@@ -47,6 +49,19 @@ function Contact() {
                 >
                   <FontAwesomeIcon icon={faFacebook} className="icon-colour" />
                   <span className="px-2">Facebook Messenger</span>
+                </a>
+              </div>
+              <div className="contact-items">
+                <a
+                  href={GOOGLE_BUSINESS_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-link"
+                >
+                  <FontAwesomeIcon icon={faGoogle} className="icon-colour" />
+                  <span className="px-2">
+                    View us on Google &amp; leave a review
+                  </span>
                 </a>
               </div>
             </div>

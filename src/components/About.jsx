@@ -5,6 +5,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import AboutIllustration from '../Images/car2.jpg';
 
 const features = [
   {
@@ -31,52 +32,52 @@ function About() {
   return (
     <section className="about-us" id="about">
       <div className="container">
-        <div className="row justify-content-center about-container">
-          <div className="col-12 text-center">
-            <h3 className="about-us-header display-4">Who We Are</h3>
-          </div>
-          <div className="col-12 text-center text-white px-5">
+        <div className="row align-items-center about-intro-row">
+          <div className="col-lg-6">
+            <p className="section-eyebrow">About Us</p>
+            <h2 className="about-us-header">
+              Auto Electricians Near Dublin Airport
+            </h2>
             <p className="about-us-text">
-              With over 30 years experience, Airport Auto Electrics stands as
-              one of Dublin's premier specialists in auto electrics. Located in
-              North Dublin for the past 27 years. Qualified auto electricians
-              ensures that your vehicle receives the utmost care and expertise.
+              Airport Auto Electrics has been North Dublin&apos;s go-to auto
+              electrician for over 30 years, working out of Cloghran on the
+              doorstep of Dublin Airport for the last 27 of them. Every job,
+              from a simple fault to a full security system install, is
+              carried out by qualified, time-served auto electricians who
+              know Irish vehicles inside out.
             </p>
-            <p className="about-us-text pb-5 mb-5">
-              At Airport Auto Electrics, we offer a comprehensive range of
-              products and services to meet all your auto electrical needs. From
-              cutting-edge vehicle security systems to reliable rotating
-              electricals, parking assist systems, GPS tracking, and fault
-              finding solutions, we have you covered. Conveniently situated near
-              Dublin Airport, M50, and M1 motorways, we provide competitive
-              rates and prioritize swift turnaround times.
+            <p className="about-us-text">
+              We supply and fit car alarms, immobilisers and tracking
+              systems, dash cams, reverse cameras and parking sensors,
+              Android Auto &amp; Apple CarPlay stereo upgrades, alternators,
+              starter motors, and full auto-electrical fault finding and
+              diagnostics. Easily reached from Dublin Airport, the M50 and
+              M1, we offer competitive rates, honest advice and fast
+              turnaround for drivers across Cloghran, Swords, Santry and
+              greater Dublin.
             </p>
           </div>
-          <div className="d-flex justify-content-center ">
-            <div className="row justify-content-center">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="col-sm-12 col-md-4 text-center about-us-statement-box"
-                >
-                  <div className="feature about-us-statement-box-inner">
-                    <i className={`feature-icon ${feature.icon}`}>
-                      <FontAwesomeIcon
-                        icon={feature.icon}
-                        className="feature-icon"
-                      />
-                    </i>
-                    <h4 className="feature-title text-white">
-                      {feature.title}
-                    </h4>
-                    <p className="feature-description text-white">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+          <div className="col-lg-6 text-center">
+            <img
+              src={AboutIllustration}
+              alt="Auto electrician servicing a car at Airport Auto Electrics"
+              className="about-us-image"
+            />
+          </div>
+        </div>
+
+        <div className="row g-4 about-features-row">
+          {features.map((feature, index) => (
+            <div key={index} className="col-md-4">
+              <div className="about-feature-card">
+                <span className="about-feature-icon-badge">
+                  <FontAwesomeIcon icon={feature.icon} className="feature-icon" />
+                </span>
+                <h3 className="feature-title">{feature.title}</h3>
+                <p className="feature-description">{feature.description}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
